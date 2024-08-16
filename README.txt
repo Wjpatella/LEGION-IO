@@ -1,3 +1,4 @@
+install Python language 3.11
 pip install requests beautifulsoup4
 
 def on_search():

@@ -27,7 +27,7 @@ class TrendData:
         print(f"Extracting from text: {text}") # Debugging line
         # Example: "About 12,345 results (0.34 sec)"
         if "About" in text and "results" in text:
-            words = text.split()
+            words = text.split()    #Cut out the String in the section
             for i, word in enumerate(words):
                 if word.lower() == "about" and i + 1 < len(words):
                     # The next word should be the number of results

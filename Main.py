@@ -16,12 +16,12 @@ def search_scholar(query):
         print(f"Failed to retrieve data: {response.status_code}")
         return
     
-    # Parse the response content with BeautifulSoup
+    # This Parse will break down the given HTML with BeautifulSoup
     soup = BeautifulSoup(response.content, 'html.parser')
     # Find all the result elements
     results = soup.find_all('div', class_='gs_r gs_or gs_scl')
     
-    # Extract and format the relevant information
+    # Extract and format the relevant information from Google Scholar HTML
     formatted_results = []
     for result in results:
         title = result.find('h3').text
